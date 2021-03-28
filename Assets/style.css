@@ -13,6 +13,11 @@ textarea {
   padding: 10px;
 }
 
+row.border {
+  border: thin;
+  border-color: grey;
+  }
+
 }
 text
 .jumbotron {
@@ -71,6 +76,11 @@ text
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.row {
+border: thin;
+border-color: grey;
 }
 
 // Small devices (landscape phones, 576px and up)
