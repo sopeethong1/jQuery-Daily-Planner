@@ -13,13 +13,23 @@ textarea {
   padding: 10px;
 }
 
-.jumbotron {
+/* .jumbotron {
 background-color: white;
 border-bottom-color:black;
 padding: 0;
 margin-bottom: 40px;
-}
+} */
 
+hr {
+  border-width: 10px;
+  border-color: black;
+ }
+
+
+
+
+  
+}
 text
 .jumbotron {
   text-align: center;
@@ -79,8 +89,4 @@ text
   transition: all 0.3s ease-in-out;
 }
 
-hr {
- border-width: 10px;
- border-color: black;
 
-}
