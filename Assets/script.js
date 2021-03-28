@@ -57,18 +57,16 @@ for (i = 0; i <= 23; i++) {
         $('#' + eventEL).children('div').children('div').children("textarea").addClass("future");
     }
 }
-console.log(currentHour);
 
-
-
-$(".saveBtn").click(function () {
-bookText = $(this).parent('div').children('div').children('textarea').val();
+$(".saveBtn").click(function (event) {
+  event.preventDefault()
+bookText = $(this).parent('div').children('div').children("textarea").val();
 bookTime = $(this).parent('div').parent().attr("id");
 appointment = {
     time: bookTime,
     details: bookText
 }
-tempArray = JSON.parse(localStorage.getItem("aveBooks"));
+tempArray = JSON.parse(localStorage.getItem("saveBooks"));
 if (tempArray === null) {
     localStorage.setItem('aveBooks', JSON.stringify([{ time: bookTime, details: bookText }]));
 }
@@ -77,5 +75,5 @@ else {
     localStorage.setItem("aveBooks", JSON.stringify(tempArray));
 
 }
-$(this).parent('div').children('div').children('textarea').replaceWith($('<textarea>' + bookText.addClass("textarea") + '</textarea>'));
+$(this).parent('div').children('div').children('textarea').replace($('<textarea>' + bookText.addClass("textarea") + '</textarea>'));
 })
