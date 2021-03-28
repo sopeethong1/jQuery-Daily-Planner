@@ -36,47 +36,47 @@
     <div class="container">
       <div class="row" id="9AM">
     <div class="col-sm" id="hour"> 9AM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
     <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id= "10AM">
     <div class="col-sm" id="hour"> 10AM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="11AM">
     <div class="col-sm" id="hour"> 11AM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="12PM">
     <div class="col-sm" id="hour"> 12PM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="1PM">
     <div class="col-sm" id="hour"> 1PM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="2PM">
     <div class="col-sm" id="hour"> 2PM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="3PM">
     <div class="col-sm" id="hour"> 3PM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="4PM">
     <div class="col-sm" id="hour"> 4PM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
   <div class="row" id="5PM">
     <div class="col-sm" id="hour"> 5PM</div>
-    <div class="col-8" id="eventplaceholder">Event Place Holder</div>
+    <textarea class="col-8 placeholder"></textarea>
      <div class="col-sm"><button class="saveBtn"><i class="fas fa-save"></i></button> </div>
   </div>
 </div>
@@ -87,3 +87,19 @@
     <script src="./Assets/script.js"></script>
   </body>
 </html>
+
+
+
+
+
+save.on('click', function (event) {
+  event.preventDefault();
+  var text = $(this).siblings('.col-sm-10').val();
+  var parent = $(this).parent().attr('id');
+  localStorage.setItem(parent, JSON.stringify(text));
+
+})
+
+
+$("#container-box").css({"background-color":"white", " border-bottom-color" :"black", "padding" : 0, "margin-bottom": "40px"});
+$("#line").css ({"border-width": "10px", "border-color": "black"});
