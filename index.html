@@ -88,18 +88,3 @@
   </body>
 </html>
 
-
-
-
-
-save.on('click', function (event) {
-  event.preventDefault();
-  var text = $(this).siblings('.col-sm-10').val();
-  var parent = $(this).parent().attr('id');
-  localStorage.setItem(parent, JSON.stringify(text));
-
-})
-
-
-$("#container-box").css({"background-color":"white", " border-bottom-color" :"black", "padding" : 0, "margin-bottom": "40px"});
-$("#line").css ({"border-width": "10px", "border-color": "black"});
