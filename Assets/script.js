@@ -1,11 +1,13 @@
 
-var time = moment().format('MMMM Do YYYY, h:mm:ss a');
+var time = moment().format('dddd, MMMM, Do');
 $("#currentDay").text(time);
 
 var update = function() {
     document.getElementById("currentDay")
-    .innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
-
-
+    .innerHTML = moment().format('dddd, MMMM, Do');
 }
 setInterval(update, 1000);
+
+
+
+
